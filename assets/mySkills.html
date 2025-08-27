@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Skills</title>
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&family=Poppins:wght@400;700&family=Ysabeau+SC:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300;1,400&family=Secular+One&family=Whisper&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css  " />
+    <style>
+      :root {
+        --primary: #008aa0;
+        --accent: #0fafd3;
+        --bg: #a61d1d;
+        --text: #333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+ background-color: var(--frist-color);
+         color: var(--text);
+      }
+
+      header {
+        background-color: var(--primary);
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      header h2 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 40px;
+      }
+
+      section {
+        margin-bottom: 3rem;
+      }
+
+      section h2 {
+        color: rgb(199, 199, 199);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 5px solid rgb(169, 169, 169);
+        padding-left: 1rem;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .skill-card {
+        background: rgb(246, 255, 255);
+        border-radius: 12px;
+        padding: 1.5rem;
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 138, 160, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgb(233, 222, 222);
+      }
+
+      .skill-icon {
+        font-size: 3rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .skill-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      @media (max-width: 600px) {
+        .container{
+          margin-top: 48px;
+        }
+        header h1 {
+          font-size: 2rem;
+        }
+
+        section h2 {
+          font-size: 15px;
+        }
+        .skill-card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .skill-title {
+          padding-left: 20px;
+        }
+
+        .skill-card {
+          width: 100%;
+          max-width: 390px;
+          max-height: 95px;
+        }
+      }
+      .background-iframe {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: -1;
+      }
+      .page {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+       
+        border: none;
+        box-shadow: 0px 40px 90px 40px var(--frist-color);
+      }
+      nav {
+        height: 10vh;
+        background-color: var(--fourth-color);
+        display: flex;
+        justify-content: space-around;
+        font-size: 2.3vh;
+        font-weight: 600;
+        /* position: sticky; */
+        z-index: 9999;
+        /* top: 0; */
+        align-items: center;
+        
+      }
+    </style>
+  </head>
+  <body onload="fadeIn()">
+    <!-- <iframe
+      src="https://skybox.blockadelabs.com/e/34dfbf73e7c10e7532175a655c81915e"
+      class="background-iframe"
+      
+      allow="fullscreen"
+    ></iframe> -->
+
+    <!-- <div id="page" class="page"> -->
+      <nav>
+        <div class="left">
+          <div class="logo">< Manik's portfolio /></div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <a class="skill-link" href="/index.html"> < Home /> </a>
+            </li>
+            <li>
+              <a class="skill-link" href="/index.html#page2"> < My Projects /> </a>
+            </li>
+            <li>
+              <a
+                href="./mySkills.html"
+                class="skill-link"
+                onclick="fadeOut(event)"
+                >< My Skills /></a
+              >
+            </li>
+            <!-- <li><a class="nlink" href="#page2">projects</a></li> -->
+            <li>
+              <a
+                href="./contact.html"
+                class="skill-link"
+                onclick="fadeOut(event)"
+                >< Contact me /></a
+              >
+            </li>
+          </ul>
+          <!--  -->
+          <div class="sec-center">
+            <input
+              class="dropdown"
+              type="checkbox"
+              id="dropdown"
+              name="dropdown"
+            />
+            <label class="for-dropdown" for="dropdown"
+              >Menu <i class="uil uil-arrow-down"></i
+            ></label>
+            <div class="section-dropdown">
+              <a class="menu-a" href="/index.html"
+                >Home <i class="uil uil-arrow-right"></i
+              ></a>
+              <input
+                class="dropdown-sub"
+                type="checkbox"
+                id="dropdown-sub"
+                name="dropdown-sub"
+              />
+              <a class="menu-a" href="/index.html#page2"
+                >Projects <i class="uil uil-plus"></i
+              ></a>
+
+              <a class="menu-a" href="./mySkills.html"
+                >Skills <i class="uil uil-arrow-right"></i
+              ></a>
+              <a class="menu-a" href="./contact.html"
+                >Contact<i class="uil uil-arrow-right"></i
+              ></a>
+            </div>
+          <!-- </div> -->
+          <!--  -->
+          <i class="fa-solid fa-dice-d20" id="icon"></i>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!-- Programming Languages -->
+      <section>
+        <h2>< Programming Languages /></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+              alt="C++"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">C / C++</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">Java</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">Python</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web Development -->
+      <section>
+        <h2>< Frontend Development /></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">HTML5</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">CSS3</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">JavaScript</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+              alt="Tailwind"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">Tailwind CSS</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React.js"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">React.js</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Backend / Database -->
+      <section>
+        <h2>< Backend & Database /></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="JDBC"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">JDBC</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://www.svgrepo.com/show/303251/mysql-logo.svg"
+              alt="MySQL"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">MySQL</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools -->
+      <section>
+        <h2>< Tools /></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              alt="VS Code"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">VS Code</div>
+          </div>
+          <div class="skill-card">
+            <!-- <div class="skill-icon"><i class="bx bxl-github"></i></div> -->
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">GitHub</div>
+          </div>
+          <div class="skill-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
+              alt="IntelliJ"
+              class="skill-icon"
+              style="width: 48px; height: 48px"
+            />
+            <div class="skill-title">IntelliJ IDEA</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function fadeIn() {
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          document.body.style.transition = "opacity 0.5s ease-in";
+          document.body.style.opacity = 1;
+        }, 50);
+      }
+    </script>
+  </body>
+</html>

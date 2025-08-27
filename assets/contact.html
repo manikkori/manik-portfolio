@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <!-- google font -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&family=Poppins:wght@400;700&family=Ysabeau+SC:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300;1,400&family=Secular+One&family=Whisper&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+
+      }
+
+      body {
+        min-height: 100vh;
+         background-color: var(--frist-color);
+
+        align-items: center;
+        justify-content: center;
+      }
+
+      .contact-wrapper {
+        margin: auto;
+        margin-top: 80px;
+        backdrop-filter: blur(12px);
+        background-color: rgba(51, 51, 51, 0.614);
+        border-radius: 15px;
+        padding: 30px 25px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.462);
+        color: #fff;
+        text-align: center;
+      }
+
+      .contact-wrapper h2 {
+        margin-bottom: 25px;
+        font-size: 2em;
+        color: #fff;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .form-group {
+        text-align: left;
+      }
+
+      .form-group label {
+        font-size: 0.9em;
+        color: #ffffffcc;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 0.95em;
+        outline: none;
+        transition: 0.3s ease;
+      }
+
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: #ddd;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 5px #0fafd3;
+      }
+
+      .submit-btn {
+        background: linear-gradient(135deg, #008aa0, #0fafd3);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1em;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: linear-gradient(135deg, #0fafd3, #008aa0);
+        box-shadow: 0 4px 10px rgba(15, 175, 211, 0.4);
+      }
+
+      @media (max-width: 500px) {
+        .contact-wrapper {
+          padding: 25px 20px;
+          margin-top: 100px;
+
+        }
+        
+      }
+
+      .background-iframe{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: -1;
+      }
+
+      .page {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+       
+        border: none;
+        box-shadow: 0px 40px 90px 40px var(--frist-color);
+      }
+      nav {
+        height: 10vh;
+        background-color: var(--fourth-color);
+        display: flex;
+        justify-content: space-around;
+        font-size: 2.3vh;
+        font-weight: 600;
+        /* position: sticky; */
+        z-index: 9999;
+        /* top: 0; */
+        align-items: center;
+        
+      }
+    </style>
+  </head>
+  <body onload="fadeIn()">
+    <!-- <iframe class="background-iframe"
+      src="https://skybox.blockadelabs.com/e/6f9b576fe6d3686e5c42bf6a1b818be2"
+      width="100%"
+      height="100%"
+      
+      allow="fullscreen"
+    ></iframe> -->
+    <nav>
+        <div class="left">
+          <div class="logo">< Manik's portfolio /></div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <a class="skill-link" href="/index.html"> < Home /> </a>
+            </li>
+            <li>
+              <a class="skill-link" href="/index.html#page2"> < My Projects /> </a>
+            </li>
+            <li>
+              <a
+                href="./mySkills.html"
+                class="skill-link"
+                onclick="fadeOut(event)"
+                >< My Skills /></a
+              >
+            </li>
+            <!-- <li><a class="nlink" href="#page2">projects</a></li> -->
+            <li>
+              <a
+                href="./contact.html"
+                class="skill-link"
+                onclick="fadeOut(event)"
+                >< Contact me /></a
+              >
+            </li>
+          </ul>
+          <!--  -->
+          <div class="sec-center">
+            <input
+              class="dropdown"
+              type="checkbox"
+              id="dropdown"
+              name="dropdown"
+            />
+            <label class="for-dropdown" for="dropdown"
+              >Menu <i class="uil uil-arrow-down"></i
+            ></label>
+            <div class="section-dropdown">
+              <a class="menu-a" href="/index.html"
+                >Home <i class="uil uil-arrow-right"></i
+              ></a>
+              <input
+                class="dropdown-sub"
+                type="checkbox"
+                id="dropdown-sub"
+                name="dropdown-sub"
+              />
+              <a class="menu-a" href="/index.html#page2"
+                >Projects <i class="uil uil-plus"></i
+              ></a>
+
+              <a class="menu-a" href="./mySkills.html"
+                >Skills <i class="uil uil-arrow-right"></i
+              ></a>
+              <a class="menu-a" href="./contact.html"
+                >Contact<i class="uil uil-arrow-right"></i
+              ></a>
+            </div>
+          <!-- </div> -->
+          <!--  -->
+          <i class="fa-solid fa-dice-d20" id="icon"></i>
+        </div>
+      </nav>
+    </div>
+    <!-- <img class="bg-img" src="/images/peakpx.jpg" alt=""> -->
+    <div class="contact-wrapper">
+      <h2>Contact Me</h2>
+      <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="your@email.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+    </div>
+
+    <script>
+      function fadeIn() {
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          document.body.style.transition = "opacity 0.6s ease-in";
+          document.body.style.opacity = 1;
+        }, 50);
+      }
+    </script>
+  </body>
+</html>
